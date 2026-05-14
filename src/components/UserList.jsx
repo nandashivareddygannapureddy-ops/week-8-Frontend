@@ -8,7 +8,7 @@
     useEffect(() => {
         async function getUsers() {
         try {
-            let res = await fetch("/user-api/user", {
+            let res = await fetch(`${import.meta.env.VITE_API_URL}/user-api/user`, {
             method: "GET",
             });
 

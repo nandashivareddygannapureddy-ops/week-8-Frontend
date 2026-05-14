@@ -14,7 +14,7 @@ function AddUser() {
         setError(null);
 
         try {
-            const res = await fetch("/user-api/user", {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/user-api/user`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newUser)
